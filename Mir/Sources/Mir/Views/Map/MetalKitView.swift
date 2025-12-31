@@ -9,7 +9,7 @@ import SwiftUI
 import MetalKit
 
 #if canImport(UIKit)
-struct MetalView: UIViewRepresentable {
+struct MetalKitView: UIViewRepresentable {
     
     // MARK: - UIViewRepresentable
     
