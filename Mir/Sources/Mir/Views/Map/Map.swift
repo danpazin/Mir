@@ -9,7 +9,7 @@ import SwiftUI
 
 public struct Map: View {
     public var body: some View {
-        MetalView()
+        MetalKitView()
     }
 }
 
