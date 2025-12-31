@@ -1,4 +1,4 @@
-// MetalView.swift
+// MetalKitView.swift
 // Mir
 //
 // SPDX-License-Identifier: Apache-2.0
@@ -20,7 +20,7 @@ struct MetalView: UIViewRepresentable {
     func updateUIView(_ uiView: UIViewType, context: Context) { }
 }
 #elseif canImport(AppKit)
-struct MetalView: NSViewRepresentable {
+struct MetalKitView: NSViewRepresentable {
     
     // MARK: - NSViewRepresentable
     
