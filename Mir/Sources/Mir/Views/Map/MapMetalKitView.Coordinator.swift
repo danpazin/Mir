@@ -1,4 +1,4 @@
-// MetalKitView.Coordinator.swift
+// MapMetalKitView.Coordinator.swift
 // Mir
 //
 // SPDX-License-Identifier: Apache-2.0
@@ -7,19 +7,19 @@
 
 import MetalKit
 
-extension MetalKitView {
+extension MapMetalKitView {
     
     final class Coordinator: NSObject, MTKViewDelegate {
         
         // MARK: - Properties
         
-        let device: MTLDevice?
+        let device: MTLDevice
+        let renderer: Renderer
         
         // MARK: - Initializers
         
         override init() {
-            self.device = MTLCreateSystemDefaultDevice()
-            super.init()
+            
         }
         
         // MARK: - MTKViewDelegate

@@ -1,4 +1,4 @@
-// MetalKitView.swift
+// MapMetalKitView.swift
 // Mir
 //
 // SPDX-License-Identifier: Apache-2.0
@@ -30,7 +30,7 @@ struct MetalKitView: UIViewRepresentable {
     }
 }
 #elseif canImport(AppKit)
-struct MetalKitView: NSViewRepresentable {
+struct MapMetalKitView: NSViewRepresentable {
     
     // MARK: - NSViewRepresentable
     
