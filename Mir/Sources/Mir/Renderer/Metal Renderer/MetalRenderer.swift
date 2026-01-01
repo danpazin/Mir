@@ -1,8 +1,8 @@
-// Metal4Renderer.swift
+// MetalRenderer.swift
 // Mir
 //
 // SPDX-License-Identifier: Apache-2.0
 // Copyright © 2026 Daniil Pazin. All rights reserved.
 //
 
-final class Metal4Renderer: Renderer { }
+final class MetalRenderer: Renderer { }
