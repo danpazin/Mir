@@ -13,21 +13,41 @@ struct MetalKitView: UIViewRepresentable {
     
     // MARK: - UIViewRepresentable
     
+    // MARK: Creating and updating the view
+    
     func makeUIView(context: Context) -> some UIView {
-        MTKView()
+        let view = MTKView()
+        view.delegate = context.coordinator
+        return view
     }
     
     func updateUIView(_ uiView: UIViewType, context: Context) { }
+    
+    // MARK: Providing a custom coordinator object
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator()
+    }
 }
 #elseif canImport(AppKit)
 struct MetalKitView: NSViewRepresentable {
     
     // MARK: - NSViewRepresentable
     
+    // MARK: Creating and updating the view
+    
     func makeNSView(context: Context) -> some NSView {
-        MTKView()
+        let view = MTKView()
+        view.delegate = context.coordinator
+        return view
     }
     
     func updateNSView(_ nsView: NSViewType, context: Context) { }
+    
+    // MARK: Providing a custom coordinator object
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator()
+    }
 }
 #endif
