@@ -51,6 +51,8 @@ extension MapMetalKitView {
         
         // MARK: Drawing the View's Contents
    
-        func draw(in view: MTKView) { }
+        func draw(in view: MTKView) {
+            renderer?.renderFrame(to: view)
+        }
     }
 }
