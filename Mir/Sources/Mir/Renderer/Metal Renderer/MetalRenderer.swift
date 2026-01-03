@@ -5,4 +5,28 @@
 // Copyright © 2026 Daniil Pazin. All rights reserved.
 //
 
-final class MetalRenderer: Renderer { }
+import MetalKit
+
+final class MetalRenderer: Renderer {
+    
+    // MARK: - Properties
+    
+    /// The Metal device used to create and manage GPU resources.
+    private let device: MTLDevice
+    /// The command queue responsible for scheduling and submitting command buffers to the GPU.
+    private let commandQueue: MTLCommandQueue?
+    
+    // MARK: - Initializers
+    
+    init(device: MTLDevice) {
+        self.device = device
+        commandQueue = device.makeCommandQueue()
+    }
+    
+    // MARK: - Renderer
+    
+    func renderFrame(to view: MTKView) {
+        
+    }
+}
+
