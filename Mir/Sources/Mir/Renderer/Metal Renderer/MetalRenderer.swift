@@ -26,6 +26,7 @@ final class MetalRenderer: Renderer {
     // MARK: - Renderer
     
     func renderFrame(to view: MTKView) {
+        guard let commandBuffer = commandQueue?.makeCommandBuffer() else { return }
         
     }
 }

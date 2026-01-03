@@ -15,12 +15,15 @@ final class Metal4Renderer: Renderer {
     private let device: MTLDevice
     /// The command queue responsible for scheduling and submitting command buffers to the GPU.
     private let commandQueue: MTL4CommandQueue?
+    /// The current Metal 4 command buffer used to encode and submit GPU work for a frame.
+    private let commandBuffer: MTL4CommandBuffer?
     
     // MARK: - Initializers
     
     init(device: MTLDevice) {
         self.device = device
         commandQueue = device.makeMTL4CommandQueue()
+        commandBuffer = device.makeCommandBuffer()
     }
     
     // MARK: - Renderer
