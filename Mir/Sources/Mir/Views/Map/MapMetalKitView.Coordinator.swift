@@ -37,9 +37,9 @@ extension MapMetalKitView {
             }
             self.device = device
             if device.supportsFamily(.metal4) {
-                renderer = Metal4Renderer(device: device)
+                renderer = MapMetal4Renderer(device: device)
             } else {
-                renderer = MetalRenderer(device: device)
+                renderer = MapMetalRenderer(device: device)
             }
             super.init()
         }
