@@ -12,6 +12,7 @@ extension MapMetalKitView {
     /// A coordinator that bridges SwiftUI's `MapMetalKitView` with MetalKit view's delegate `MTKViewDelegate`.
     ///
     /// - Note: If no Metal-capable GPU is available,  both `device` and `renderer` will be `nil`, and rendering operations become no-ops.
+    @MainActor
     final class Coordinator: NSObject, MTKViewDelegate {
         
         // MARK: - Properties

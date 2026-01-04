@@ -7,6 +7,7 @@
 
 import MetalKit
 
+@MainActor
 protocol Renderer: AnyObject {
     
     /// Instructs the renderer to draw a frame for a view.
