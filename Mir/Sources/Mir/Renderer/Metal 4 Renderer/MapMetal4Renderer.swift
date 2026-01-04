@@ -1,4 +1,4 @@
-// Metal4Renderer.swift
+// MapMetal4Renderer.swift
 // Mir
 //
 // SPDX-License-Identifier: Apache-2.0
@@ -7,7 +7,7 @@
 
 import MetalKit
 
-final class Metal4Renderer: Renderer {
+final class MapMetal4Renderer: Renderer {
     
     // MARK: - Properties
     
@@ -29,6 +29,12 @@ final class Metal4Renderer: Renderer {
     // MARK: - Renderer
     
     func renderFrame(to view: MTKView) {
-        
+        guard
+            let renderPassDescriptor = view.currentMTL4RenderPassDescriptor,
+            let renderEncoder = commandBuffer?.makeRenderCommandEncoder(descriptor: renderPassDescriptor)
+        else {
+            return
+        }
+              
     }
 }
