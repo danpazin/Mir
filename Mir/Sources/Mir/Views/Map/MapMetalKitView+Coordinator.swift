@@ -66,7 +66,7 @@ extension MapMetalKitView {
         // MARK: - MTKViewDelegate
 
         func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
-            renderer?.scene.camera.aspectRatio = Float(size.width / size.height)
+            renderer?.scene.camera.aspectRatio = size.width / size.height
         }
 
         /// A delegate method called for each frame to be rendered.

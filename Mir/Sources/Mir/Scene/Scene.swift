@@ -16,12 +16,13 @@ struct Scene {
 
     init() {
         camera = Camera(
-            position: [0, 0, 3],
-            target: [0, 0, 0],
-            up: [0, 1, 0],
-            fov: (Float.pi / 4),
+            bearing: .degrees(0),
+            pitch: 0,
+            coordinate: .init(),
+            fov: 60,
             near: 0.01,
             far: 100,
+            zoom: 1,
             aspectRatio: 1
         )
         globe = Globe()

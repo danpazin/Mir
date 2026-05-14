@@ -44,8 +44,8 @@ final class MapMetalRenderer: Renderer {
         renderEncoder.setCullMode(.back)
         var uniforms = Uniforms(
             modelMatrix: matrix_identity_float4x4,
-            viewMatrix: scene.camera.viewMatrix,
-            projectionMatrix: scene.camera.projectionMatrix
+            viewMatrix: simd_float4x4(scene.camera.viewMatrix),
+            projectionMatrix: simd_float4x4(scene.camera.projectionMatrix)
         )
         renderEncoder.setVertexBytes(&uniforms, length: MemoryLayout<Uniforms>.stride, index: 1)
         for i in scene.globe.patches.indices {

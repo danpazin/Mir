@@ -70,8 +70,8 @@ final class MapMetal4Renderer: Renderer {
         renderEncoder.setCullMode(.back)
         let uniforms = Uniforms(
             modelMatrix: matrix_identity_float4x4,
-            viewMatrix: scene.camera.viewMatrix,
-            projectionMatrix: scene.camera.projectionMatrix
+            viewMatrix: simd_float4x4(scene.camera.viewMatrix),
+            projectionMatrix: simd_float4x4(scene.camera.projectionMatrix)
         )
         uniformBuffer.contents().storeBytes(of: uniforms, as: Uniforms.self)
         // Flatten patch vertices into contiguous GPU input expected by `vertexShader`.
